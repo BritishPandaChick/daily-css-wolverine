@@ -1,0 +1,129 @@
+/* Inspired by https://codepen.io/AlxCrmr/pen/eWMVvG?editors=0110 */
+
+body {
+  background: gray;
+  width: 50%;
+  margin: 50px auto;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  overflow: hidden;
+}
+
+.forehead {
+  width: 0;
+  height: 0;
+  border-left: 245px solid transparent;
+  border-right: 245px solid transparent;
+  border-top: 200px solid #F6C721;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+
+.nose {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 20px solid #F5C71F;
+  position: relative;
+  top: -50px;
+}
+
+.nose:after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 120px solid #F5C71F;
+}
+
+.nose-container {
+  transform: rotate(180deg);
+  position: relative;
+  right: 200px;
+  top: 20px;
+  z-index: 3;
+}
+
+.left-eye, .right-eye {
+  height: 50px;
+  width: 110px;
+  border-radius: 0 0 90px 90px;
+  -moz-border-radius: 0 0 90px 90px;
+  -webkit-border-radius: 0 0 90px 90px;
+  background-color: white;
+  position: relative;
+}
+
+.left-eye {
+  transform: rotate(35deg);
+  bottom: 120px;
+  left: 60px;
+}
+
+.right-eye {
+  transform: rotate(-35deg);
+  bottom: 170px;
+  left: 320px;
+}
+
+.left-corner, .right-corner {
+  width: 0;
+  height: 0;
+  border-bottom: 200px solid #F6C721;
+  position: relative;
+  z-index: 2;
+}
+
+.left-corner {
+  border-right: 200px solid transparent;
+  left: 5px;
+  bottom: 75px;
+}
+
+.right-corner {
+  border-left: 200px solid transparent;
+  left: 295px;
+  bottom: 275px;
+}
+
+.left-mask, .right-mask {
+  border-bottom: 60px solid black;
+  height: 0;
+  width: 110px;
+  position: relative;
+  z-index: 3;
+}
+
+.left-mask {
+  border-left: 50px solid transparent;
+  border-right: 20px solid transparent;
+  bottom: 445px;
+  transform: rotate(-90deg);
+  right: 60px;
+}
+
+.right-mask {
+  border-right: 50px solid transparent;
+  border-left: 20px solid transparent;
+  bottom: 515px;
+  transform: rotate(90deg);
+  left: 380px;
+}
+
+.jaw {
+  width: 440px;
+  height: 220px;
+  background-color: #E7C770;
+  position: relative;
+  bottom: 615px;
+  left: 50px;
+  z-index: 1;
+}
